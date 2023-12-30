@@ -1,0 +1,20 @@
+---
+- name: install and configure pihole and dns over tls
+  hosts: pihole
+  vars:
+  become: false
+  pre_tasks:
+    - name: Load variables
+      ansible.builtin.include_vars: '{{ item }}'
+      with_first_found:
+        - "vars/default.yml"
+  tasks:
+    - name: install required dependencies
+      ansible.builtin.apt:
+        pkg: 
+          - python3
+          - python3-pip
+          - libaugeas0
+          - nginx
+          - libnginx-mod-stream
+        state: present

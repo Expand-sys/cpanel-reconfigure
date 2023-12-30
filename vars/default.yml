@@ -1,0 +1,18 @@
+---
+ADDR: 192.0.2.0 #Required
+ADDR6:
+TTL: 14400
+CONTACTPAGER: user@examplesms.com
+CONTACTEMAIL: user@example.com
+HOMEMATCH: home
+HOMEDIR: /home #Required
+LOGSTYLE: combined #required
+NSTTL: 86400
+NS: ns1.domain.tld #Required
+NS2: ns2.domain.tld #Required
+NS3:
+NS4:
+ETHDEV: eth0
+HOST:
+DEFMOD: jupiter #Required
+SCRIPTALIAS: y #Required
